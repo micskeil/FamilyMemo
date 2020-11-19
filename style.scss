@@ -1,0 +1,54 @@
+* {
+    border: 0px;
+    padding: 0px; 
+}
+
+html body {
+    background-image: url("./src/bg.jpg");
+    background-color: lightblue;
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.info-box {
+    background-color: white;
+    border: 1px solid black;
+    background-color: #ED5061;
+    color: white;
+}
+
+.card-container {    
+    .card-row {        
+        .card-col {            
+            .card-item {
+            flex-shrink: 0;
+            background-color: rgb(165, 159, 159);
+            width: 100%;
+            height: auto;
+            border: 1px solid grey;
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 1;
+            img {
+                width: inherit;
+                height: inherit;                  
+            }
+            .opened {
+                opacity: 1;
+            }
+            .closed {
+                opacity: 0;
+            }
+            img {
+                opacity: 0;
+            }
+            .found {
+                opacity: 1;
+            }
+
+            }
+              
+        }
+    }
+}
+

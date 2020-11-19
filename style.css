@@ -1,0 +1,52 @@
+* {
+  border: 0px;
+  padding: 0px;
+}
+
+html body {
+  background-image: url("./src/bg.jpg");
+  background-color: lightblue;
+  background-size: contain;
+  min-height: 100vh;
+}
+
+.info-box {
+  background-color: white;
+  border: 1px solid black;
+  background-color: #ED5061;
+  color: white;
+}
+
+.card-container .card-row .card-col .card-item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #a59f9f;
+  width: 100%;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.card-container .card-row .card-col .card-item img {
+  width: inherit;
+  height: inherit;
+}
+
+.card-container .card-row .card-col .card-item .opened {
+  opacity: 1;
+}
+
+.card-container .card-row .card-col .card-item .closed {
+  opacity: 0;
+}
+
+.card-container .card-row .card-col .card-item img {
+  opacity: 0;
+}
+
+.card-container .card-row .card-col .card-item .found {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
