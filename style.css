@@ -10,6 +10,10 @@ html body {
   min-height: 100vh;
 }
 
+.info {
+  top: 0px;
+}
+
 .info-box {
   background-color: white;
   border: 1px solid black;
