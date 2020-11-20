@@ -9,7 +9,7 @@ $(document).ready( () => {
     ];
     let opened_cards = 0;
     let srcOfOpened = [];
-    let rounds = 8;
+    let rounds = 6;
     let found_cards = 0;
 
     // Choose 3 pictures random
@@ -42,34 +42,42 @@ $(document).ready( () => {
 
     // Opening and matching cards
     $('.card-item').on('click', event => {
-
-        
         if (opened_cards < 2) {
-            opened_cards = opened_cards + 1;
-            srcOfOpened.push($(event.currentTarget).children().attr('src'));
-            
-            $(event.currentTarget).children().toggleClass('opened');
+            if ($(event.currentTarget).children().hasClass('opened')) {
+            } else {    
+                opened_cards = opened_cards + 1;
+                srcOfOpened.push($(event.currentTarget).children().attr('src'));
+                $(event.currentTarget).children().toggleClass('opened');
 
-            if (srcOfOpened.lenght = 2 && srcOfOpened[0] === srcOfOpened[1]) {
-                $(".opened").attr("src", './img/found_card.png');
-                $(".opened").addClass("found");
-                $(".opened").removeClass("opened");
-                found_cards = found_cards + 2;
-                $(".found-cards").html(found_cards);
+                // FOUND CARDS
+                if (srcOfOpened.lenght = 2 && srcOfOpened[0] === srcOfOpened[1]) {
+                    $(".opened").attr("src", './img/found_card.png');
+                    $(".opened").addClass("found");
+                    $(".opened").removeClass("opened");
+                    found_cards = found_cards + 2;
+                    $(".found-cards").html(found_cards);
+                    if (found_cards === 6) {
+                        $('.win').toggleClass('d-none')
+                        $('.win').toggleClass('d-flex')
+                    } 
+                }
             } 
 
         } else {            
             
             $('.card-item').children().removeClass('opened');
             rounds = rounds - 1;
+            if (rounds === 0) {
+                $('.game-over').toggleClass('d-none')
+                $('.game-over').toggleClass('d-flex')
+            } else {
             $(".rounds").html(rounds);
             opened_cards = 0;
             srcOfOpened = [];
             $('html').active();
+            }
         }
-
     })
 
-
-    positioning();
+    positioning ();
 });

@@ -22,11 +22,6 @@ html body {
     .card-row {        
         .card-col {            
             .card-item {
-            flex-shrink: 0;
-            background-image: url('./img/img_bg.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
             background-color: rgb(161, 128, 154);
             width: 100%;
             height: auto;
@@ -55,5 +50,21 @@ html body {
               
         }
     }
+}
+
+.game-over {
+    font-size: 12rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(117, 117, 117, 0.623);
+    
+}
+
+.win {
+    font-size: 12rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(117, 117, 117, 0.623);
+    
 }
 
